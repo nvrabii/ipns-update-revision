@@ -8,7 +8,7 @@ GitHub Action to update the CID associated with an IPNS name.
 - uses: nvrabii/ipns-update-revision@v1
   id: upd_rev
   with:
-    w3_signing_key: ${{ secrets.SIGNING_KEY }}
+    signing_key: ${{ secrets.SIGNING_KEY }}
     new_cid: ${{ steps.some_id.outputs.cid }}
 
 - run: echo ${{ steps.upd_rev.outputs.name }}

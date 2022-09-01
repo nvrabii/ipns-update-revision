@@ -1,0 +1,19 @@
+name: 'IPNS update revision'
+description: 'Update the CID associated with an IPNS name'
+author: nvrabii
+branding:
+  icon: 'edit-2'
+  color: 'gray-dark'
+inputs:
+  signing_key:
+    description: 'The private key used at the generation of the IPNS name'
+    required: true
+  new_cid:
+    description: 'The CID that will be associated to the IPNS name'
+    required: true
+outputs:
+  name:
+    description: 'The IPNS name of the updated revision'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
